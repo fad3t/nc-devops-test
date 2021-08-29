@@ -28,5 +28,5 @@ jobs:
         run: npm run test
         env:
           API_BASE_PATH: /api
-          API_SECRET: foo
+          API_SECRET: ${{ secrets.API_SECRET }}
           DB_URL: postgres://postgres:postgres@postgres:5432/postgres
