@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "`npm bin`/jest --force-exit --runInBand",
+    "test": "`npm bin`/jest --force-exit --runInBand --reporters=jest-Junit",
     "migrate": "cd src && ../node_modules/.bin/sequelize db:migrate --config ./config/config.js"
   },
   "author": "",
@@ -14,6 +14,7 @@
     "chai": "*",
     "chai-http": "*",
     "jest": "*",
+    "jest-junit": "*",
     "jsonwebtoken": "*"
   },
   "dependencies": {
@@ -27,5 +28,14 @@
     "pg": "*",
     "sequelize": "*",
     "sequelize-cli": "^6.2.0"
+  },
+  "jest-junit": {
+    "outputDirectory": "reports",
+    "outputName": "jest-junit.xml",
+    "ancestorSeparator": " › ",
+    "uniqueOutputName": "false",
+    "suiteNameTemplate": "{filepath}",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}"
   }
 }
