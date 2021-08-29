@@ -27,8 +27,6 @@ jobs:
       - name: Connect to PostgreSQL
         run: npm run test
         env:
-          POSTGRES_HOST: postgres
-          POSTGRES_PORT: 5432
           API_BASE_PATH: /api
           API_SECRET: foo
-          DB_URL: postgres://postgres:postgres@postgres:5432/test
+          DB_URL: postgres://postgres:postgres@postgres:5432/postgres
