@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "`npm bin`/jest --force-exit --runInBand --reporters=jest-Junit",
+    "test": "`npm bin`/jest --force-exit --runInBand --reporters=jest-junit",
     "migrate": "cd src && ../node_modules/.bin/sequelize db:migrate --config ./config/config.js"
   },
   "author": "",
