@@ -24,16 +24,16 @@ jobs:
         run: git init
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Connect to PostgreSQL
+      - name: Run tests
         run: npm run test
         env:
           API_BASE_PATH: /api
           API_SECRET: ${{ secrets.API_SECRET }}
           DB_URL: postgres://postgres:postgres@postgres:5432/postgres
       
-      - name: Test Report
+      - name: Test report
         uses: dorny/test-reporter@v1
         if: success() || failure()    # run this step even if previous step failed
         with:
